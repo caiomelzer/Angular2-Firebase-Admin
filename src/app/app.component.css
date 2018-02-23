@@ -1,0 +1,121 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#content {
+    width: 100%;
+    padding: 10px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #333;
+    color: #fff;
+    transition: all 1.3s;
+}
+
+#sidebar .sidebar-header h3 {
+    text-align: center;
+}
+
+#sidebar .sidebar-header .user-details {
+    display: block;
+    padding: 0px 5px;
+}
+
+#sidebar .sidebar-header .user-details .avatar {
+    width: 65px;
+    float: left;
+}
+
+#sidebar .sidebar-header .user-details .avatar .circle {
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #fff;
+}
+
+#sidebar .sidebar-header .user-details .circle img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#sidebar .sidebar-header .user-details .user-actions {
+    width: 155px;
+    float: left;
+    text-align: center;
+}
+
+#sidebar .sidebar-header .user-details .user-actions .btn-group {
+    margin-top: 5px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #222;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #000;
+}
+
+#sidebar ul li a[data-toggle="collapse"] {
+    position: relative;
+}
+
+#sidebar ul li a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+#menu .navbar-header #sidebarCollapse {
+    float: left;
+    margin-left: 10px;
+}
+
+#menu .navbar-right {
+    margin-right: 0px !important;
+    padding-right: 10px;
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    max-width: 100%;
+    overflow-x: hidden;
+}
