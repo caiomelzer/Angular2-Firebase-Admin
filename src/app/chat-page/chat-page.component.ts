@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../providers/auth.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-chat-page',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router, public app: AppComponent) {
+    app.setBreadcrumb('Chat');
+  }
 
   ngOnInit() {
   }

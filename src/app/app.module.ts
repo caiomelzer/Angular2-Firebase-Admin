@@ -7,10 +7,15 @@ import { AngularFireModule} from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { AuthService } from './providers/auth.service';
+import { Todos } from './providers/todos.service';
+
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
 import { NotExistPageComponent } from './not-exist-page/not-exist-page.component';
+import { TodoPageComponent } from './todo-page/todo-page.component';
+import { TodoDetailPageComponent } from './todo-detail-page/todo-detail-page.component';
+import { TodoCreatePageComponent } from './todo-create-page/todo-create-page.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDos-MO-EuQYMtwdIdWMqoXZzz2yT5qjEo",
@@ -22,11 +27,15 @@ export const firebaseConfig = {
 };
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: HomePageComponent},
   { path: 'login', component: LoginPageComponent },
+  { path: 'todo', component: TodoPageComponent },
+  { path: 'todo/new', component: TodoDetailPageComponent },
   { path: 'chat', component: ChatPageComponent },
   { path: '404', component: NotExistPageComponent },
   { path: '**', component: NotExistPageComponent}
+  
 ];
 
 @NgModule({
@@ -35,7 +44,10 @@ const routes: Routes = [
     LoginPageComponent,
     HomePageComponent,
     ChatPageComponent,
-    NotExistPageComponent
+    NotExistPageComponent,
+    TodoPageComponent,
+    TodoDetailPageComponent,
+    TodoCreatePageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +56,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService],
+  providers: [AuthService, Todos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

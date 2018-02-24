@@ -10,16 +10,17 @@
                 <div class="user-actions">
                     Olá {{user_displayName}}!
                     <div class="btn-group" role="group">
-                        <a routerLink="/profile" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-user"></i> Perfil</a>
-                        <button class="btn btn-primary btn-sm" (click)="logout()"><i class="glyphicon glyphicon-log-out"></i> Sair</button>
+                        <a routerLink="/profile" class="btn btn-primary btn-sm"><i class="fas fa-user"></i> Perfil</a>
+                        <button class="btn btn-primary btn-sm" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
                     </div>
                 </div>
             </div>
 
         </div>
         <ul class="list-unstyled components">
-            <li [routerLinkActive]="['active']"><a routerLink="/dashboard"><i class="glyphicon glyphicon-th"></i> Dashboard</a></li>
-            <li [routerLinkActive]="['active']"><a routerLink="/chat"><i class="glyphicon glyphicon-lock"></i> Chat</a></li>
+            <li [routerLinkActive]="['active']"><a routerLink="/dashboard"><i class="fas fa-columns"></i> Dashboard</a></li>
+            <li [routerLinkActive]="['active']"><a routerLink="/chat"><i class="fas fa-comments"></i> Chat</a></li>
+            <li [routerLinkActive]="['active']"><a routerLink="/todo"><i class="fas fa-list-ul"></i> To Do</a></li>
         </ul>
     </nav>
     <div id="content">
@@ -27,18 +28,18 @@
             <div id="menu">
                 <div class="navbar-header">
                     <button aria-controls="collapseOne" data-toggle="collapse" data-target=".collapseMenu" type="button" id="sidebarCollapse" class="btn navbar-btn btn-primary">
-                      <i class="glyphicon glyphicon-align-justify"></i>
+                      <i class="fas fa-bars"></i>
                     </button>
                     <a class="navbar-brand">{{breadcrumb}}</a>
                 </div>
                 <div class="navbar-right">
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn navbar-btn btn-secondary">
-                      <i class="glyphicon glyphicon-envelope"></i>
-                    </button>
-                        <button type="button" class="btn navbar-btn btn-secondary">
-                      <i class="glyphicon glyphicon-comment"></i>
-                    </button>
+                        <a routerLink="/messages" type="button" class="btn navbar-btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a routerLink="/chat" type="button" class="btn navbar-btn btn-secondary">
+                            <i class="fas fa-comments"></i>
+                        </a>
                     </div>
                 </div>
             </div>

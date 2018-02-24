@@ -1,0 +1,28 @@
+/* tslint:disable:no-unused-variable */
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
+
+import { TodoDetailPageComponent } from './todo-detail-page.component';
+
+describe('TodoDetailPageComponent', () => {
+  let component: TodoDetailPageComponent;
+  let fixture: ComponentFixture<TodoDetailPageComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ TodoDetailPageComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TodoDetailPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

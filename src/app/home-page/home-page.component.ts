@@ -11,7 +11,7 @@ import { AppComponent } from '../app.component';
 export class HomePageComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router, public app: AppComponent) {
-    app.setBreadcrumb('teste');
+    app.setBreadcrumb('Dashboard');
   }
 
   ngOnInit() {
