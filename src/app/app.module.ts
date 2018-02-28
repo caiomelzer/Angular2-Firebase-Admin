@@ -31,7 +31,9 @@ const routes: Routes = [
   { path: 'dashboard', component: HomePageComponent},
   { path: 'login', component: LoginPageComponent },
   { path: 'todo', component: TodoPageComponent },
-  { path: 'todo/new', component: TodoDetailPageComponent },
+  { path: 'todo/create', component: TodoDetailPageComponent },
+  { path: 'todo/:todo', component: TodoDetailPageComponent },
+  { path: 'todo/:todo/update', component: TodoDetailPageComponent },
   { path: 'chat', component: ChatPageComponent },
   { path: '404', component: NotExistPageComponent },
   { path: '**', component: NotExistPageComponent}

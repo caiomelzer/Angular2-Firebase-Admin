@@ -16,6 +16,7 @@
             <label for="alterEgo">Quantidade</label>
             <input type="number" class="form-control" name="quantity" id="quantity" required [(ngModel)]="exercise.quantity">
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" (click)="create(exercise)">Create</button>
+        <button type="submit" class="btn btn-success" (click)="update(exercise)">Update</button>
     </form>
 </div>
